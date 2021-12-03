@@ -20,14 +20,16 @@ function updateDependencies(tree: Tree) {
   */
   // instead we just add the firebase dependencies
   // we'll use "latest" so we dont have to keep versions of the plugin tracked to firebase versions
-  return addDependenciesToPackageJson(tree, 
+  return addDependenciesToPackageJson(
+    tree,
     {
-        'firebase-admin': 'latest', //"^9.2.0",
-        'firebase-functions': 'latest' //"^3.11.0"
-    }, 
+      'firebase-admin': 'latest', //"^9.2.0",
+      'firebase-functions': 'latest', //"^3.11.0"
+    },
     {
-      //'@nrwl/node': nxVersion 
-    });
+      //'@nrwl/node': nxVersion
+    }
+  );
 }
 
 function normalizeOptions(schema: Schema) {
